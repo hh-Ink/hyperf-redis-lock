@@ -2,6 +2,8 @@
 
 一个简单的Redis分布式锁的实现 基于Hyperf框架。本扩展实现了基本的分布式锁，支持阻塞式分布式锁和非阻塞式分布式锁。
 
+> fork 自 [Lysice/hyperf-redis-lock](https://github.com/Lysice/hyperf-redis-lock), 在其基础上支持 `Hyperf ^3.1`
+
 ## 原理
 `Redis`的命令为原子性 使用`Redis`的`set`即可保证业务的串行执行。
 `2.8`之前版本的`Redis`不支持`set` 的`ex`选项 因此只能使用 `setnx+expire`的方式。 对应扩展1.0版本.
